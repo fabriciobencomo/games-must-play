@@ -1,4 +1,5 @@
 // import React from 'react'
+import { ArrowButtons } from './ArrowButtons';
 
 export const Slider = () => {
   return (
@@ -46,6 +47,7 @@ export const Slider = () => {
             </div>
           </div>
         </div>
+        <ArrowButtons/>
       </div>
     </>
   )
