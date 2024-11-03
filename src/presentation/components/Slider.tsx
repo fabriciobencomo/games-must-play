@@ -1,5 +1,6 @@
 // import React from 'react'
 import { ArrowButtons } from './ArrowButtons';
+import { Thumbnail } from './Thumbnail';
 
 export const Slider = () => {
   return (
@@ -8,7 +9,7 @@ export const Slider = () => {
         <div className="">
           <div className="item active">
             <img src="../../assets/images/nierAutomata.webp" alt="Nier Automata Background Cover" />
-            <div className="content text-white">
+            <div className="content text-white ">
               <p className="text-white">Design</p>
               <p>Slider 01</p>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium blanditiis doloribus sit voluptas cum! Accusamus fugiat tenetur quaerat fugit quae nesciunt iste! Ipsa possimus doloremque, reprehenderit nobis modi ab molestias!</p>
@@ -48,6 +49,7 @@ export const Slider = () => {
           </div>
         </div>
         <ArrowButtons/>
+        <Thumbnail/>
       </div>
     </>
   )
