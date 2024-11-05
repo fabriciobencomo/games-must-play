@@ -9,7 +9,7 @@ export const games = [
   },
   {
     id: 2,
-    name: 'Nier Automata',
+    name: 'Zelda BOTW',
     coverImage: '../../assets/images/nier-automata-cover.webp',
     backgroundImage: '../../assets/images/nierAutomata.webp',
     details: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium blanditiis doloribus sit voluptas cum! Accusamus fugiat tenetur quaerat fugit quae nesciunt iste! Ipsa possimus doloremque, reprehenderit nobis modi ab molestias!',
@@ -17,7 +17,7 @@ export const games = [
   },
   {
     id: 3,
-    name: 'Nier Automata',
+    name: 'Undertale',
     coverImage: '../../assets/images/nier-automata-cover.webp',
     backgroundImage: '../../assets/images/nierAutomata.webp',
     details: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium blanditiis doloribus sit voluptas cum! Accusamus fugiat tenetur quaerat fugit quae nesciunt iste! Ipsa possimus doloremque, reprehenderit nobis modi ab molestias!',
