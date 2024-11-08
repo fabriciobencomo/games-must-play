@@ -2,7 +2,7 @@
 import { ArrowButtons } from './ArrowButtons';
 import { Thumbnail } from './Thumbnail';
 import { games } from '../games/games';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { ItemGame } from './ItemGame';
 
 export const Slider = () => {
@@ -12,20 +12,29 @@ export const Slider = () => {
 
   const onChangeActive = (value: number) => {
     console.log(value)
-    if(value <= 0){
+    if(value < 0){
       setActiveItem(listGames.length - 1)
     } else if(value >= listGames.length){
       setActiveItem(0)
     }else{
       setActiveItem(value)
     }
-  console.log(value)
   }
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      onChangeActive(activeItem + 1);
+    }, 10000); // Update state every second
+
+    // Cleanup the interval on component unmount
+    return () => clearInterval(interval);
+  }, [activeItem]);
+  
 
   return (
     <>
       <div className="h-screen -mt-[50px] relative">
-        <div className="">
+        <div className="mx-2 flex justify-center">
           {
             listGames.map((game, index) => (
               <ItemGame key={game.id} name={game.name} details={game.details} backgroundImage={game.backgroundImage} active={index} currentActiveItem={activeItem}/>
