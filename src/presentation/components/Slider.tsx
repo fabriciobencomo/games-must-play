@@ -2,7 +2,7 @@
 import { ArrowButtons } from './ArrowButtons';
 import { Thumbnail } from './Thumbnail';
 import { games } from '../games/games';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ItemGame } from './ItemGame';
 
 export const Slider = () => {
@@ -24,7 +24,7 @@ export const Slider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       onChangeActive(activeItem + 1);
-    }, 10000); // Update state every second
+    }, 30000); // Update state every second
 
     // Cleanup the interval on component unmount
     return () => clearInterval(interval);
@@ -37,7 +37,7 @@ export const Slider = () => {
         <div className="mx-2 flex justify-center">
           {
             listGames.map((game, index) => (
-              <ItemGame key={game.id} name={game.name} details={game.details} backgroundImage={game.backgroundImage} active={index} currentActiveItem={activeItem}/>
+              <ItemGame key={game.id} name={game.name} details={game.details} backgroundImage={game.backgroundImage} active={index} currentActiveItem={activeItem} spotifyUrl={game.spotifyUrl}/>
             ))
           }
         </div>

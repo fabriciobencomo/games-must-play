@@ -6,10 +6,11 @@ interface Game{
   details: string;
   active: number;
   currentActiveItem: number;
+  spotifyUrl: string;
 }
 
 
-export const ItemGame = ({name, backgroundImage, details, active, currentActiveItem}: Game) => {
+export const ItemGame = ({name, backgroundImage, details, active, currentActiveItem, spotifyUrl}: Game) => {
   
   const [showSpotifyEmbed, setshowSpotifyEmbed] = useState(false)
 
@@ -40,7 +41,7 @@ export const ItemGame = ({name, backgroundImage, details, active, currentActiveI
           </div>
           <p>{name}</p>
           <p className={`transition-[1s] ${showSpotifyEmbed ? 'hidden' : ''}`}>{details}</p>
-          <iframe className={`${showSpotifyEmbed ? '' : 'hidden'} opacity-80 spotify-playlist`} src="https://open.spotify.com/embed/album/6Nws2NAPuxaHzB7MfD1lhg?utm_source=generator" width="80%" height="350" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <iframe className={`${showSpotifyEmbed ? '' : 'hidden'} opacity-80 spotify-playlist`} src={spotifyUrl} width="80%" height="350" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
     </div>
   )
