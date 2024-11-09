@@ -7,7 +7,7 @@ import { ItemGame } from './ItemGame';
 
 export const Slider = () => {
 
-  const [listGames, setListGames] = useState(games)
+  const [listGames] = useState(games)
   const [activeItem, setActiveItem] = useState(0)
 
   const onChangeActive = (value: number) => {
