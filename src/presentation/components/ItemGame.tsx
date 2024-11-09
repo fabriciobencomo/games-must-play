@@ -41,7 +41,7 @@ export const ItemGame = ({name, backgroundImage, details, active, currentActiveI
           </div>
           <p>{name}</p>
           <p className={`transition-[1s] ${showSpotifyEmbed ? 'hidden' : ''}`}>{details}</p>
-          <iframe className={`${showSpotifyEmbed ? '' : 'hidden'} opacity-80 spotify-playlist`} src={spotifyUrl} width="80%" height="350" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <iframe className={`${showSpotifyEmbed ? '' : 'hidden'} opacity-80 spotify-playlist`} src={spotifyUrl} width="80%" height="350" frameBorder="0"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
     </div>
   )
